@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fibonacci_find_N_Number
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = Fibonacci_Iterative(100); 
+            Console.WriteLine(x.ToString());
+            Console.ReadLine();
+        }
+
+        public static double Fibonacci_Iterative(int len)  
+        {
+            double a = 0, b = 1, c = 0;             
+            for (int i = 2; i < len; i++)  
+            {  
+                c= a + b;            
+                a= b;  
+                b= c;  
+            }
+
+            return c;
+        }
+    }
+}
